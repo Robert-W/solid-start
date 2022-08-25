@@ -1,4 +1,4 @@
-import { Link } from '@solidjs/router';
+import { NavLink } from '@solidjs/router';
 
 /**
  * @function Links
@@ -11,7 +11,14 @@ export default function Links(props) {
         .filter(route => route.path)
         .map(route => (
           <li>
-            <Link href={route.path}>{route.label}</Link>
+            <NavLink 
+              href={route.path} 
+              aria-label={route.aria}
+              end={true}
+              inactiveClass='navigation__link'
+              activeClass='navigation__link active'>
+              <route.icon size={24} class='navigation__icon' />
+            </NavLink>
           </li>
         ))
       }

@@ -1,0 +1,21 @@
+.navigation__link {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 60px;
+  color: #fff;
+}
+
+.navigation__link:hover {
+  background: $navigation-hover;
+}
+
+.navigation__link.active {
+  border-left: 4px solid $navigation-active-border;
+  background: $navigation-hover;
+}
+
+.navigation__link.active .navigation__icon {
+  margin-left: -4px;
+}
