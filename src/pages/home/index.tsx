@@ -1,7 +1,11 @@
+import { Component } from "solid-js";
+
 /**
  * @function Home
  * @description Entry for the Home Component
  */
-export default function Home(_prop) {
+const Home: Component = () => {
   return <div class='inner'>Hello from Home</div>;
 }
+
+export default Home;

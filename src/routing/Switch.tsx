@@ -1,16 +1,17 @@
-import { For } from "solid-js";
 import { Routes, Route } from '@solidjs/router';
+import { Component, For } from 'solid-js';
+import { RouteConfig } from './config';
 
 /**
  * @function Switch
- * @description Switvh that renders our routes
+ * @description Swith that renders our routes
  */
-export default function Switch(props) {
-  return (
-    <Routes>
-      <For each={props.routes.filter(route => route.path)}>{route => (
-        <Route path={route.path} component={route.component} />
-      )}</For>
-    </Routes>
-  );
-}
+const Switch: Component<{ routes: Array<RouteConfig> }> = (props) => (
+  <Routes>
+    <For each={props.routes.filter(route => route.path)}>{route => (
+      <Route path={route.path} component={route.component} />
+    )}</For>
+  </Routes>
+);
+
+export default Switch;

@@ -1,7 +1,11 @@
+import { Component } from "solid-js";
+
 /**
  * @function About
  * @description Entry for the About Component
  */
-export default function About(_prop) {
+const About: Component = () => {
   return <div class='inner'>Hello from About</div>;
 }
+
+export default About;

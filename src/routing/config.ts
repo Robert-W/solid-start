@@ -1,6 +1,16 @@
 import { BiRegularHomeHeart } from 'solid-icons/bi';
 import { BiSolidInfoCircle } from 'solid-icons/bi';
-import { lazy } from 'solid-js';
+import { lazy, Component } from 'solid-js';
+import { IconProps } from 'solid-icons';
+
+
+export interface RouteConfig {
+  path: string;
+  label: string;
+  aria: string;
+  icon: Component<IconProps>;
+  component: Component;
+}
 
 export default [
   {
